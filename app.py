@@ -1,9 +1,3 @@
-#Configuration and importing
-from flask import Flask #importing in only the flask class
-app = Flask(__name__) # pass flask the special dunder variable to instantiate
-
-#creating an index route
-@app.route('/') #decorator to add functionality to the route method
-def index():
-    return 'Welcome to petfax'
-
+#import in your petfax application factory as a package
+from petfax import create_app
+app = create_app()
